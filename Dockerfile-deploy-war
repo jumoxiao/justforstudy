@@ -1,0 +1,14 @@
+FROM tomcat
+
+MAINTAINER "wuchao"
+
+ENV DIR_WEBAPP /usr/local/tomcat/webapps/
+
+RUN  rm -rf $DIR_WEBAPP/*
+
+ADD CCBData19th.war $DIR_WEBAPP/ROOT.war
+
+RUN  unzip $DIR_WEBAPP/ROOT.war  -d  $DIR_WEBAPP/ROOT/
+
+CMD ["catalina.sh", "run"]
+~                            
