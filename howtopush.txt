@@ -1,0 +1,3 @@
+git remote add origin https://github.com/jumoxiao/justforstudy.git
+git commit -m "fisrt commit,add dockerfile-deploy-war"
+git push -u origin master
